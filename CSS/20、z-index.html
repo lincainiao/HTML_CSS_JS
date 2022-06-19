@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        #content{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            font-size: 20px;
+            border: black 1px solid;
+            width: 216px;
+        }
+        /*父级元素相对定位*/
+        #content ul{
+            position: relative;
+        }
+        .girlsName,.bg{
+            width: 216px;
+            height: 26px;
+            position: absolute;
+            top: 120px;
+            /*background: gray;*/
+        }
+        .bg{
+            background: gray;
+            z-index: 1;
+            /*透明度*/
+            opacity: 0.5;
+        }
+        .girlsName{
+            color: wheat;
+            z-index: 0;
+        }
+        ul,li{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <ul>
+        <li class="image"><a href="#"><img src="../Resource/Img/4205%20(32).jpg" width="216" height="144"></a></li>
+        <li class="bg"></li>
+        <li class="girlsName">芝芝</li>
+        <li class="number">4269</li>
+        <li class="color">黑色礼服</li>
+    </ul>
+</div>
+<div id="content">
+    <ul>
+        <li class="image"><a href="#"><img src="../Resource/Img/4269%20(28).jpg" width="216" height="144"></a></li>
+        <li class="bg"></li>
+        <li class="girlsName">芝芝</li>
+        <li class="number">4269</li>
+        <li class="color">黑色礼服</li>
+    </ul>
+</div>
+</body>
+</html>

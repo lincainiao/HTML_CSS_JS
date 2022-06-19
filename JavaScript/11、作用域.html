@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+<body>
+<script>
+  'use strict'
+  // 常量
+  const AGE = 22;
+  var name = `zhizhi`;
+  // alert(window.name);
+  function abs(){
+      var x = 1;
+      x = x+1;
+  }
+  // x = x+2; // Uncaught ReferenceError: x is not defined
+
+  function xyx(){
+      var x = "x" + y;
+      console.log(x);
+      var y = "y";
+  }
+
+  // 为了解决多个js文件调用同一个全局变量产生的冲突
+  // 唯一全局变量
+  var final = {};
+  // 定义全局变量
+  final.name = "zhizhi";
+  // 全局方法
+  final.add = function (a,b){
+      return a+b;
+  };
+
+  function aaa(){
+      for (let i = 0; i < 100; i++) {
+          console.log(i);
+      }
+      console.log(i+1000);
+  }
+</script>
+</body>
+</html>

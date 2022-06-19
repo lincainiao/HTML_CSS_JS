@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body id="body">
+<p id="p3">p3</p>
+<div id="father">
+    <h1>标题1</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+</div>
+<div id="div2">
+    <h2>div2</h2>
+</div>
+<div id="list">
+    <p id="l1">l1</p>
+    <p id="l2">l2</p>
+    <p id="l3">l3</p>
+    <p id="l4">l4</p>
+</div>
+<script>
+    "use strict"
+    // 获得节点
+    // 对应CSS的选择器
+    let h1 = document.getElementsByTagName('h1');
+    let p1 = document.getElementById(`p1`);
+    let p2 = document.getElementsByClassName(`p2`);
+    let father = document.getElementById(`father`);
+    let body = document.getElementById(`body`);
+    let div2 = document.getElementById(`div2`);
+
+
+    //获取父节点下的所有子节点
+    // let son = father.children;
+    // let first = father.firstChild;
+    // let last = father.lastChild ;
+
+    // 更新节点
+    // father.innerText = `zhizhi`; // 修改文本的值
+    // father.innerHTML = `<strong>123</strong>`
+    // father.style.color = `red`; // 更改节点CSS样式
+
+    // 删除节点
+    // body.removeChild(div2);
+    // 标准写法
+    // div2.parentElement.removeChild(div2) // parentElement 获取父节点
+
+    // 插入节点
+    let p3 = document.getElementById(`p3`);
+    // father.append(p3); // 追加
+    //创建节点
+    let newP = document.createElement(`p`); // 创建一个p标签
+    newP.id = `newP`;
+    newP.innerText = `zhizhi`;
+
+    // father.appendChild(newP);
+    // 创建一个标签节点
+    let newScript = document.createElement('script');
+    newScript.setAttribute('type','text/javascript');
+
+    //创建style样式标签
+    let myStyle = document.createElement(`style`);
+    myStyle.setAttribute(`type`,`text/css`); //将style标签设置为css样式
+    myStyle.innerHTML = `body {background-color : wheat;}`; // 设置css样式
+    // document.getElementsByTagName(`head`)[0].appendChild(myStyle); // 将样式添加插入
+
+    // 要包含的节点insertBefore(newNode,targetNode)
+    let l1 = document.getElementById(`l1`);
+    // let l2 = document.getElementById(`l2`);
+    let ll = document.createElement(`p`);
+    ll.setAttribute(`id`,`ll`);
+    ll.innerText = `zhizhi`;
+    let list = document.getElementById(`list`);
+    list.insertBefore(ll,l1);
+</script>
+</body>
+</html>

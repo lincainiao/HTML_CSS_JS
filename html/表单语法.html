@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单语法</title>
+</head>
+<body>
+<a name="top"></a>
+<!--表单语法form
+action : 表单提交的位置，可以是网站，也可以是一个请求处理地址
+method : post ， get 提交方式
+get 方式能在url中看到我们提交的信息，不安全，高效
+post 比较安全，传输大文件-->
+<h1>注册</h1>
+<form action="目录.html" method="post">
+<!--    文本输入框-->
+<!--    readonly : 只读，不能修改-->
+<!--    placeholder : 提示
+        required : 非空判断
+        pattern : 正则表达式-->
+    <p>名字 <input type="text" name="username" placeholder="what's your name" required></p>
+    <p>readonly <input type="text" name="readonly" placeholder="readonly" readonly></p>
+<!--    hidden : 隐藏，可以通过隐藏域传递默认值-->
+    <p>密码 <input type="password" name="userpassword" value="123456" hidden></p>
+    <p>下拉框：
+        <select name="girls">
+            <option>zhizhi</option>
+            <option selected>yanqi</option>
+            <option>wxy</option>
+        </select>
+    </p>
+    <p>文本域：
+        <textarea name="textarea" cols="50" rows="10">
+
+        </textarea>
+    </p>
+    <p>文件域：
+        <input type="file" name="file">
+    </p>
+    <p>单选框：
+<!--        disabled : 禁用，不能选择-->
+        <input type="radio" name="choice" value="choice1" disabled>choice1
+        <input type="radio" name="choice" value="choice2">choice2
+        <input type="radio" name="choice" value="choice3">choice3
+    </p>
+    <p>图片按钮：
+        <input type="image" name="buttonImg" src="../Resource/Img/4269%20(28).jpg" width="108" height="72">
+    </p>
+    <p>多选框：
+        <input type="checkbox" name="checkboxGirls" value="zz">zz
+        <input type="checkbox" name="checkboxGirls" value="yq">yq
+        <input type="checkbox" name="checkboxGirls" value="wxy">wxy
+        <input type="checkbox" name="checkboxGirls" value="mdb">mdb
+    </p>
+    <p>搜索：
+        <input type="search" name="search">
+    </p>
+    <p>简单认证
+        <br>邮箱：
+        <input type="email" name="email">
+        <br>数字：
+        <input type="number" name="number" step="10">
+        <br>url：
+        <input type="url" name="url">
+        <br>滑块：
+        <input type="range" name="range" step="5">
+    </p>
+    <p>自定义邮箱：
+        <input type="text" name="myeamil" pattern="">
+    </p>
+    <p>增强鼠标可用性：
+<!--        点击对应的文字即可锁定到框-->
+        <label for="mark">try to click</label>
+        <input type="text" id="mark">
+    </p>
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+</form>
+<a name="bottom"></a>
+<a href="#top">回到顶部</a>
+</body>
+</html>

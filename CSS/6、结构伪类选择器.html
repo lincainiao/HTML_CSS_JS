@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器</title>
+    <style>
+        /*用 : 精准定位*/
+        /*ul下的第一个li*/
+        ul li:first-child{
+            color: blue;
+        }
+        /*ul下的最后一个li*/
+        ul li:last-child{
+            color: brown;
+        }
+        ul li:last-child:hover{
+            background: red;
+        }
+        li:nth-of-type(2){
+            color: yellow;
+        }
+        li:nth-of-type(3){
+            color: green;
+        }
+        h1:nth-of-type(1){
+            color: black;
+        }
+        /*p:nth-of-type(1){*/
+        /*    color: blue;*/
+        /*}*/
+        /*p:nth-of-type(2){*/
+        /*    */
+        /*}*/
+
+        body h1:first-child{
+            color: black;
+        }
+        p:nth-of-type(1){
+            color: blue;
+        }
+        p:nth-of-type(2){
+            color: red;
+        }
+        p:nth-of-type(3){
+            color: pink;
+        }
+        p:nth-of-type(4){
+            color: yellow;
+        }
+        /*只选中选中p0*/
+        /*选中p元素父级的第一个元素，并且改选中的元素同样是p元素
+        按顺序选*/
+        /*h1:nth-child(1){*/
+        /*    color: blueviolet;*/
+        /*}*/
+        /*选择父元素里第二个类型为p的元素
+        按类型选*/
+        /*p:nth-of-type(1){*/
+        /*    color: blue;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <h1>黑色</h1>
+    <p>蓝色</p>
+    <p>红色</p>
+    <p>粉红色</p>
+    <p>黄色</p>
+    <ul>
+        <li>蓝色</li>
+        <li>黄色</li>
+        <li>绿色</li>
+        <li>棕色：鼠标方上来就变红色</li>
+    </ul>
+    <p>p7</p>
+    <p>p8</p>
+</body>
+</html>

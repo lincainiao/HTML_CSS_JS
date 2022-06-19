@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程控制</title>
+</head>
+<body>
+<script>
+    'use strict'
+    let age = 3;
+    if(age >3){
+        console.log("haha");
+    }else {
+        console.log("hello");
+    }
+
+    // while (age < 100){
+    //     age = age+1;
+    // }
+
+    for (let i = 0; i < 3; i++) {
+        age = age+1;
+    }
+
+    let arr = [1,2,3,4,5,4,6,8,9];
+    // arr.forEach(function (e) {
+    //     console.log(e)
+    // })
+
+    // num为索引，index
+    for (let num in arr) {
+        console.log(arr[num])
+    }
+</script>
+</body>
+</html>

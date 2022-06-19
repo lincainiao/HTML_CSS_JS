@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #nav{
+            height: 80px;
+            background: bisque;
+            position: relative;
+            margin: 0;
+        }
+        #girls{
+            width: 110px;
+            margin: 0;
+            padding: 0;
+            background: gray;
+            position: absolute;
+            left: 30px;
+            top: 15px;
+        }
+        h1{
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+        }
+        #list{
+            height: 50px;
+            width: 600px;
+            background: gray;
+            position: absolute;
+            left: 200px;
+            top: 20px;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            font-family: 宋体;
+            font-size: 30px;
+        }
+        #zhizhi{
+            position: relative;
+            left: -20px;
+        }
+        #wxyi{
+            position: relative;
+            left: 20px;
+        }
+        #yq{
+            position: relative;
+            left: 60px;
+        }
+        #mxy{
+            position: relative;
+            left: 100px;
+        }
+        #wxyao{
+            position: relative;
+            left: 140px;
+        }
+        #search-input{
+            height: 50px;
+            width: 300px;
+            background: gray;
+            position: absolute;
+            left: 900px;
+            top: 20px;
+        }
+        #searchSpan{
+            font-family: 宋体;
+            font-size: 25px;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+        #searchArea{
+            width: 200px;
+            height: 30px;
+            position: relative;
+            left: 15px;
+            top: 7px;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <div id="girls"><h1>girls</h1></div>
+        <div id="list">
+            <ul id="navUl">
+                <li><a href="#" id="zhizhi">芝芝</a></li>
+                <li><a href="#" id="wxyi">王心怡</a></li>
+                <li><a href="#" id="yq">言蹊</a></li>
+                <li><a href="#" id="mxy">梦心玥</a></li>
+                <li><a href="#" id="wxyao">王馨瑶</a></li>
+            </ul>
+        </div>
+    <div id="search-input">
+        <span id="searchSpan"><label for="searchArea">搜索</label></span>
+        <input type="search" id="searchArea">
+    </div>
+</div>
+</body>
+</html>

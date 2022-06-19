@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<script>
+    'use strict'
+    var nowTime = new Date(); // Sun Feb 27 2022 12:40:08 GMT+0800 (中国标准时间)
+    nowTime.getFullYear(); // 年
+    nowTime.getMonth(); // 月 0~11
+    nowTime.getDate(); // 星期几
+    nowTime.getDay(); // 日
+    nowTime.getHours(); // 时
+    nowTime.getMinutes(); // 分
+    nowTime.getSeconds(); // 秒
+
+    // 时间戳
+    nowTime.getTime(); // 从1970.1.1 00:00:00到现在的毫秒数
+
+    // 时间戳转为Date类型
+    let t1 = new Date(1645937147211); // Sun Feb 27 2022 12:45:47 GMT+0800 (中国标准时间)
+
+    // 打印时间格式
+    nowTime.toLocaleDateString(); // "2022/2/27"
+
+</script>
+</body>
+</html>

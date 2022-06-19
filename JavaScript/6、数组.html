@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+    'use strict'
+    arr = [1,2,3,4,5,6];
+    let arr1;
+    arr1 = [1,2,3,4,5,"1","2"];
+    console.log(arr.length);
+
+    arr.length = 10;
+    console.log(arr);
+
+    console.log(arr.indexOf(2))
+
+    console.log(arr.slice(1,5));
+
+    arr.push(11,12);
+    arr.pop();
+
+    arr.unshift(99,88);
+    arr.shift(99);
+
+    let arr2;
+    arr2 = ["B","c","A"];
+    arr2.sort(); // ["A", "B", "c"]
+    arr2.reverse()// ["c", "B", "A"]
+
+    let arr3;
+    arr3 = arr1.concat(arr2); // [1, 2, 3, 4, 5, "1", "2", "c", "B", "A"]
+
+    arr.join('-'); // "0-2-3-4-5-6"
+
+    let arr4;
+    arr4 = [[1,2,3],[7,8,9]];
+    console.log(arr4); // [Array(3), Array(3)]
+    console.log(arr4[0][1]); // 2
+
+</script>
+</body>
+</html>

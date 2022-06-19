@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+    <style>
+        /*径向渐变，圆形渐变*/
+        body{
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+            background-repeat: no-repeat;
+        }
+        #nav{
+            width: 500px;
+        }
+        h1{
+            font-size: 50px;
+            color: gray;
+            /*width: 120px;*/
+            padding-left: 10px;
+            /*text-indent: 1em;*/
+            /*背景
+            背景颜色 图片定位 图片地址*/
+            background: bisque url("../Resource/Img/右箭头.jpg") 450px;
+            background-repeat: no-repeat;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        ul{
+            background: bisque;
+        }
+        ul li{
+            line-height: 30px;
+            /*删除点 list-style:none*/
+            list-style: none;
+            /*空心圆*/
+            /*list-style: circle;*/
+            /*有序*/
+            /*list-style: decimal;*/
+            text-indent: 1em;
+            background: bisque url("../Resource/Img/右箭头.jpg");
+            /*图片定位*/
+            background-position: 420px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+    <h1 class="title">girls</h1>
+        <ul>
+            <li><a href="#" class="girlszhizhi">zhizhi</a>&nbsp;&nbsp;<a href="#" class="girlszhizhi">zhizhi</a>&nbsp;&nbsp;<a href="#" class="girlszhizhi">zhizhi</a></li>
+            <li><a href="#" class="girlsyq">yanqi</a>&nbsp;&nbsp;<a href="#" class="girlsyq">yanqi</a>&nbsp;&nbsp;<a href="#" class="girlsyq">yanqi</a></li>
+            <li><a href="#" class="girlswxy">wxy</a>&nbsp;&nbsp;<a href="#" class="girlswxy">wxy</a>&nbsp;&nbsp;<a href="#" class="girlswxy">wxy</a></li>
+            <li><a href="#" class="girlscm">chocolatemilk</a>&nbsp;&nbsp;<a href="#" class="girlscm">chocolatemilk</a>&nbsp;&nbsp;<a href="#" class="girlscm">chocolatemilk</a></li>
+        </ul>
+    </div>
+</body>
+</html>

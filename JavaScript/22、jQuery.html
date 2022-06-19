@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        #divMove{
+            width: 500px;
+            height: 500px;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+<!--    获取鼠标的坐标-->
+mouse:<span id="mouseMove"></span>
+<div id="divMove">
+    在这里移动鼠标试试！
+</div>
+<ul id="list">
+    <li class="zhizhi">zhizhi</li>
+    <li class="wxy">wxy</li>
+    <li class="yanqi">yanqi</li>
+</ul>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    "use strict";
+    // $(`p`).click(); // 标签选择器
+    // $(`.class`).click(); // 类选择器
+    // $(`#id`).click(); // id选择器
+
+    // $(`#id1`).mousedown(); // 按下
+    // $(`#id1`).mousemove(); // 移动
+
+    // 当网页元素加载完毕之后，响应事件
+    $(function (){
+        $(`#divMove`).mousemove(function (e){
+            $(`#mouseMove`).text(`x: `+e.pageX+` y: `+e.pageY);
+        });
+    });
+
+    // 操作Dom元素
+    
+</script>
+</body>
+</html>

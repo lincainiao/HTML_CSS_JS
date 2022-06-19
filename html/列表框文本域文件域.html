@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表框文本域和文件域</title>
+</head>
+<body>
+<form action="目录.html">
+<!--下拉框：select
+    selected：默认
+    -->
+    <p>下拉框 :
+        <select name="girls">
+            <option value="mdb">mdb</option>
+            <option value="wxy">wxy</option>
+            <option value="yq">yq</option>
+            <option value="zz" selected>zz</option>
+        </select>
+    </p>
+    <p>文本域
+        <textarea name="textarea" cols="50" rows="10">
+        </textarea>
+    </p>
+    <p>文件域
+        <input type="file" name="file">
+        <br>
+        <input type="button" name="uploadFile" value="upload">
+
+        </input>
+    </p>
+    <p>
+        <input type="submit"></input>
+        <input type="reset"></input>
+    </p>
+</form>
+</body>
+</html>

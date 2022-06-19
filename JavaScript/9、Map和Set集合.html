@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map和Set集合</title>
+</head>
+<body>
+<script>
+    'use strict'
+
+    var map = new Map([["zhizhi",22],["yanqi",18],["wxy",21]]);
+    // 通过key获得value
+    var age = map.get("zhizhi");
+    console.log(`zhzhi:${age}`); // 22
+
+    //新增或修改
+    map.set("mxy",24);
+
+    // 删除
+    // map.delete("wxy");
+
+    // 遍历
+    // for (let num of map){
+    //     console.log(num);
+    // }
+
+    // Set 无序不重复集合
+    var set = new Set([1,2,3,4,5,5,8,8,9]);
+
+    // 添加
+    set.add(1);
+    set.add(12);
+    // 删除
+    set.delete(1);
+
+    // 查看是否包含
+    set.has(8);
+
+    // 遍历
+    for (let num of set){
+        console.log(num);
+    }
+
+</script>
+</body>
+</html>

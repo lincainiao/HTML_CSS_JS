@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图片</title>
+    <style>
+        div{
+            width: 1000px;
+            height: 700px;
+            border: 1px solid red;
+            /*默认是全部平铺的*/
+            background-image: url("../Resource/Img/yqnqi.jpg");
+        }
+        #div2{
+            /*仅水平平铺*/
+            background-repeat: repeat-x;
+        }
+        /*不平铺*/
+        #div3{
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+</body>
+</html>

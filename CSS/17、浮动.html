@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        /*clear
+        right:右侧不允许有浮动元素
+        both:两侧都不允许有浮动元素
+        */
+        #box{
+            border: 1px red solid;
+            padding: 20px;
+            /*1、height: 800px;*/
+            /*3、overflow: hidden;*/
+        }
+        /*4、*/
+        #box:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div{
+            border: 1px black solid;
+        }
+        #div1{
+            float: left;
+        }
+        #div2{
+            float: left;
+        }
+        #div3{
+            float: right;
+        }
+        #div4{
+            float: right;
+        }
+        /*2、*/
+        /*#clear{*/
+        /*    clear: both;*/
+        /*    padding: 0;*/
+        /*    margin: 0;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="img" id="div1"><img src="../Resource/Img/4269%20(28).jpg" width="216" height="144"></div>
+    <div class="img" id="div2"><img src="../Resource/Img/4205%20(32).jpg" width="216" height="144"></div>
+    <div class="img" id="div3"><img src="../Resource/Img/yqnqi.jpg"></div>
+    <div class="img" id="div4">12313131313131312312312313213123131231313132</div>
+<!--    <div id="clear"></div>-->
+</div>
+</body>
+</html>

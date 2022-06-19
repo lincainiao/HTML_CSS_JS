@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+    'use strict'
+    let girls = {
+        name : `zhizhi`,
+        age : 22,
+        sex : `female`
+    }
+    // console.log(girls); // {name: "zhizhi", age: 22, sex: "female"}
+    // 对象准换为JSON字符串
+    let jsonGirls = JSON.stringify(girls)
+    // console.log(jsonGirls); // {"name":"zhizhi","age":22,"sex":"female"}
+
+    // 参数为JSON字符串
+    let obj = JSON.parse(`{"name":"zhizhi","age":22,"sex":"female"}`);
+    // console.log(obj); // {name: "zhizhi", age: 22, sex: "female"}
+
+</script>
+</body>
+</html>

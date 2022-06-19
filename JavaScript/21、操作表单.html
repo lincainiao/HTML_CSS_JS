@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!--表单绑定提交事件
+绑定一个提交检测的函数 ，获取true和false，将结果返回表单-->
+<form action="" method="post" onsubmit="return formsub()">
+    <p>
+        <span>用户名：</span>
+        <input type="text" name="username" id="username" required>
+    </p>
+    <p>
+        <span>密码：</span>
+        <input type="password" name="psw" id="psw">
+    </p>
+
+<!--    绑定事件，当被点击的时候执行一段函数-->
+    <p> <button type="button" onclick="sub()">按钮</button></p>
+    <p>
+        <span>性别：</span>
+        <input type="radio" name="sex" value="male" id="male">男
+        <input type="radio" name="sex" value="female" id="female">女
+    </p>
+    <p><input type="submit" onclick="sub()">&nbsp;&nbsp;&nbsp;<input type="reset"></p>
+</form>
+
+<form action="" method="post" onsubmit="return formsub()">
+    <p>
+        <span>用户名：</span>
+        <input type="text" id="uname" name="uname">
+    </p>
+    <p>
+        <span>密码：</span>
+<!--        输入的密码-->
+        <input type="password" name="inputpd" id="inputpd">
+    </p>
+    <p>
+<!--        实际的密码，-->
+        <input type="hidden" name="md5pd" id="md5pd">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+
+<!--导入md5-->
+<script type="text/javascript" src="../Resource/md5.js"></script>
+<script>
+
+  "use strict";
+  let username = document.getElementById(`username`);
+  // username.value = `zhizhi`; // 修改输入的值
+
+  // 对于单选框，多选框等有固定的value的，只能获取固定的值
+  let male = document.getElementById(`male`);
+  let female = document.getElementById(`female`);
+
+  // male.checked; // 返回true表示male被选中，false则表示未选中
+
+  // 提交表单
+  function sub(){
+      // alert(`zhizhi`);
+      let username = document.getElementById(`username`);
+      let psw = document.getElementById(`psw`);
+      // alert(username.value+` : `+psw.value);
+
+      // 直接输出密码不安全
+      // MD5算法
+      psw.value = hex_md5(psw.value);
+  }
+  function formsub(){
+      let uname = document.getElementById(`uanme`);
+      let inputpd = document.getElementById(`inputpd`);
+      // 实际的密码
+      let md5pd = document.getElementById(`md5pd`);
+      md5pd.value = hex_md5(inputpd.value);
+      return true;
+  }
+</script>
+</body>
+</html>
